@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <title>Tafteria</title>
+</head>
+<body>
+    <header class="header">
+        <div class="left-section">
+            <div class="nav-button" onclick="toggleSidebar()"></div>
+			<a href="index.html">
+            	<img class="tafteria-logo-icon" alt="Tafteria Logo" src="tafteria-logo.png">
+			</a>
+        </div>
+        <div class="right-section">
+			<div class="search-establishments">
+				<input type="text" class="label" placeholder="Search establishments...">
+			</div>
+            <button class="register" href="register.html">Register</button>
+            <button class="login" href="login.html">Login</button>
+        </div>
+    </header>
+    <nav id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">Establishments</a>
+        <a href="#">Reviews</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div id="main" class="main-content">
+        <!-- Main content goes here -->
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

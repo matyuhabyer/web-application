@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    width: 100%;
+    background-color: #00661d;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+.register, .login {
+    border-radius: 8px;
+    background-color: #e9a709;
+    width: 124px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    box-sizing: border-box;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    box-shadow: 0 9px #00350f;
+    line-height: 150%;
+    margin-left: 10px;
+}
+
+.register:hover, .login:hover {
+    background-color: white;
+    color: #e9a709;
+}
+
+.register:active, .login:active {
+    box-shadow: 0 5px #00350f;
+    transform: translateY(4px);
+}
+
+.search-establishments {
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 400px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 16px;
+    color: #828282;
+    margin: 0 20px;
+    flex-grow: 1;
+}
+
+.search-establishments input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    color: #333;
+}
+
+.nav-button {
+    width: 28px;
+    height: 24px;
+    background-image: url(nav-icon.png);
+    background-size: cover;
+    cursor: pointer;
+    border: none;
+}
+
+.tafteria-logo-icon {
+    width: 270px;
+    height: auto;
+    object-fit: cover;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #00350f;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #e9a709;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sidebar.active {
+    width: 250px;
+}
+
+.main-content {
+    transition: margin-left 0.5s;
+    padding: 16px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .left-section, .right-section, .search-establishments {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .register, .login {
+        width: 100%;
+    }
+
+    .search-establishments {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .tafteria-logo-icon {
+        margin: 10px 0;
+    }
+}
