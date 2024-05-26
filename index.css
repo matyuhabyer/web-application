@@ -324,8 +324,68 @@ body {
 }
 
 .featured-establishments, .recent-reviews{
-    padding-left: 25px;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.establishment-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    transition: transform 0.3s;
+    padding-top: 20px;
+}
+
+.establishment-card:hover {
+    transform: translateY(-5px);
+}
+
+.establishment-image img {
+    height: 400px;
+    max-width: 780px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+.establishment-info {
+    padding: 16px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.star{
+    width: 15px;
+    height: 15px;
+    margin-bottom: 3px;
+}
+
+.establishment-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    color: #555;
+}
+
+.establishment-rating .fas.fa-star {
+    color: #f39c12;
+}
+
+.establishment-name {
+    font-size: 20px;
+    margin: 8px 0;
+    color: #333;
+}
+
+.establishment-description {
+    font-size: 14px;
+    color: #777;
 }
 
 /*RESPONSIVENESS*/
