@@ -5,6 +5,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/*HEADER*/
 .header {
     width: 100%;
     background-color: #00661d;
@@ -15,7 +16,8 @@ body {
     padding: 0 20px;
     box-sizing: border-box;
     color: #fff;
-    position: sticky;
+    position: relative;
+    z-index: 2;
 }
 
 .left-section {
@@ -112,6 +114,7 @@ body {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    z-index: 2;
 }
 
 .sidebar a {
@@ -139,35 +142,37 @@ body {
     width: 250px;
 }
 
-.main-content {
+
+/*CONTENT TOP*/
+.main-content-white {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 90px);
+    height: 100vh;
     transition: margin-left 0.5s;
-    padding: 16px;
     box-sizing: border-box;
+    background-image: url(agno1.jpg);
+    background-position: center;
 }
 
 .index-body-white {
     width: 100%;
-    max-width: 1200px;
+    height: 100vh;
     position: relative;
-    height: auto;
-    overflow: hidden;
     text-align: center;
     font-size: 25px;
     color: white;
-    background: white;
-    padding: 20px;
-    box-shadow: 0px 3px 6px grey;
-    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .discover-the-best {
     font-size: 80px;
     display: inline-block;
-    color: #000;
+    color: white;
     width: 100%;
     margin-bottom: 20px;
 }
@@ -175,7 +180,8 @@ body {
 .find-the-top-rated {
     font-size: 30px;
     font-weight: 300;
-    color: #000;
+    max-width: 1200px;
+    color: white;
     display: inline-block;
     width: 100%;
     margin-bottom: 40px;
@@ -183,7 +189,10 @@ body {
 
 .index-buttons {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
+    max-width: 1200px;
+    align-items: center;
+    gap: 50px;
 }
 
 .index-buttons a {
@@ -198,7 +207,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 9px rgb(110, 110, 110);
+    box-shadow: 0 9px rgb(49, 49, 49);
     text-decoration: none;
     color: #fff;
     margin: 10px auto;
@@ -218,10 +227,108 @@ body {
 }
 
 .review-button:active, .explore-button:active {
-    box-shadow: 0 5px rgb(110, 110, 110);
+    box-shadow: 0 5px rgb(49, 49, 49);
     transform: translateY(4px);
 }
 
+/*CONTENT BOTTOM*/
+.main-content-yellow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100vh;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: #e9a709;
+}
+
+.bottom-features{
+    display: inline-flex;
+    justify-content: space-between;
+    margin-bottom: 75px;
+    align-items: center;
+    gap: 80px;
+}
+
+.left-featured{
+    width: 823px;
+    position: left;
+    border-radius: 20px;
+    background-color: #fff;
+    height: 736px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 48px;
+    color: #000;
+}
+
+.right-reviews{
+    width: 823px;
+    position: right;
+    border-radius: 20px;
+    background-color: #fff;
+    height: 736px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 48px;
+    color: #000;
+}
+
+.footer{
+    width: 100%;
+    background-color: #00661d;
+    box-sizing: border-box;
+    height: 90px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 24px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.top-button{
+    border-radius: 8px;
+    background-color: #e9a709;
+    width: 124px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    box-sizing: border-box;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    box-shadow: 0 9px #00350f;
+    line-height: 150%;
+    margin-left: 10px;
+}
+
+.top-button:hover {
+    background-color: white;
+    color: #e9a709;
+}
+
+.top-button:active {
+    box-shadow: 0 5px #00350f;
+    transform: translateY(4px);
+}
+
+.featured-establishments, .recent-reviews{
+    padding-left: 25px;
+    position: relative;
+}
+
+/*RESPONSIVENESS*/
 @media (max-width: 1024px) {
     .discover-the-best {
         font-size: 60px;
@@ -234,9 +341,20 @@ body {
     .explore-button, .review-button {
         width: 80%;
     }
+
+    .bottom-features {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .left-featured, .right-reviews {
+        width: 100%;
+        height: auto;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .header {
         flex-direction: column;
         height: auto;
@@ -280,5 +398,27 @@ body {
         height: auto;
         padding: 20px;
         margin-top: 20px;
+    }
+
+    .main-content-yellow {
+        height: auto;
+        padding: 20px;
+    }
+
+    .bottom-features {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .left-featured, .right-reviews {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer{
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
     }
 }
