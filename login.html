@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Tafteria</title>
+  <link rel="stylesheet" href="./index.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="header">
+    <div class="left-section">
+      <div class="nav-button" onclick="toggleSidebar()"></div>
+      <a href="index.html">
+        <img class="tafteria-logo-icon" alt="Tafteria Logo" src="tafteria-logo.png">
+      </a>
+    </div>
+    <div class="search-establishments">
+      <input type="text" class="label" placeholder="Search establishments...">
+    </div>
+    <div class="right-section">
+      <a class="register" href="register.html">Register</a>
+      <a class="login" href="login.html">Login</a>
+    </div>
+  </header>
+
+  <nav id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
+    <a href="#">Home</a>
+    <a href="#">Profile</a>
+    <a href="#">Establishments</a>
+    <a href="#">Reviews</a>
+  </nav>
+
+  <div id="main" class="main-content-white">
+    <div class="min-h-screen flex flex-col justify-center items-center">
+      <div class="bg-white p-8 rounded shadow-md w-96 border-4 border-green-900">
+        <h2 class="text-2xl font-semibold text-center mb-2">Welcome to Tafteria!</h2>
+        <p class="text-gray-500 text-sm text-center mb-4">Please log in</p>
+        <form action="index.html" method="POST">
+          <div class="mb-4">
+            <label for="username" class="block text-gray-700 text-sm font-bold mb-2">Username:</label>
+            <input type="text" id="username" name="username" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline" required>
+          </div>
+          <div class="mb-4">
+            <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password:</label>
+            <input type="password" id="password" name="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline" required>
+          </div>
+          <button type="submit" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="left-footer">
+      <b class="tafteria-2024">© Tafteria 2024 (CCAPDEV Group 14)</b>
+    </div>
+    <div class="right-footer"></div>
+    <div class="footer-button">
+      <a class="top-button" href="#">
+        <b class="to-the-top">To the top</b>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
