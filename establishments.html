@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+        <title>Establishments | Tafteria</title>
+    </head>
+    <body>
+    <!-- Header -->
+    <header class="w-full bg-green-800 h-20 flex items-center justify-between px-5 text-white relative z-10">
+        <div class="flex items-center">
+            <!-- Sidebar Toggle Button -->
+            <div class="w-7 h-6 bg-no-repeat bg-center cursor-pointer" onclick="toggleSidebar()" style="background-image: url(nav-icon.png);"></div>
+            <!-- Logo -->
+            <a href="index.html">
+                <img class="w-64 h-auto ml-5" alt="Tafteria Logo" src="tafteria-logo.png">
+            </a>
+        </div>
+        <!-- Search Bar -->
+        <div class="flex-grow max-w-md mx-5">
+            <input type="text" class="w-full h-10 rounded-lg border border-gray-300 px-4 text-black" placeholder="Search establishments...">
+        </div>
+        <!-- Register and Login Buttons -->
+        <div class="flex items-center">
+            <a class="bg-yellow-500 w-32 h-10 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors mx-2" href="#">Register</a>
+            <a class="bg-yellow-500 w-32 h-10 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors mx-2" href="#">Login</a>
+        </div>
+    </header>
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar" class="h-full fixed top-0 left-0 bg-green-900 w-0 overflow-x-hidden transition-width duration-500 pt-16 z-20">
+        <!-- Close Button -->
+        <a href="javascript:void(0)" class="absolute top-0 right-5 text-white text-3xl hover:text-yellow-500" onclick="toggleSidebar()">&times;</a>
+        <!-- Navigation Links -->
+        <a href="index.html" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Home</a>
+        <a href="#" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Profile</a>
+        <a href="establishments.html" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Establishments</a>
+        <a href="#" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Reviews</a>
+    </nav>
+    <main>
+        <div id="establishments" class="bg-white-500 p-5 flex justify-center">
+            <div id="reviews-box" class="w-1/2 bg-white p-5 rounded-lg grid grid-row gap-4">
+                <!--est1-->
+                <div class="flex rounded-lg shadow-lg transition transform hover:-translate-y-1 hover:bg-yellow-100 ">
+                    <div class="w-64 h-64 rounded-lg flex justify-end" style="background-image: url(24chk.jpg);">
+                        <img src="hrt.jpg" class="w-12 h-12 p-2 rounded-full transition-transform transform hover:-translate-y-1">
+                    </div>
+                    <div class="p-2 ml-4">
+                        <div class="flex justify-between font-bold">
+                            <p class="text-3xl underline underline-offset-2">24 Chicken</p>
+                            <p class="text-l">(0912) 345 67890</p>
+                        </div>
+                        <div class="flex items-center ">
+                            <img src="star.png" class="w-4 h-4 mr-2">
+                            <p class="text-sm font-bold mr-1">5</p>
+                            <p class="text-sm text-gray-500">(69 Reviews)</p>
+                        </div>
+                        <p class="text-sm text-gray-700 max-w-xl mt-14">"...Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..."<span class="italic font-semibold">- Jose Rizal</span></p>
+                    </div>
+                </div>
+                <!--est2-->
+                <div class="flex rounded-lg shadow-lg transition transform hover:-translate-y-1 hover:bg-yellow-100 ">
+                    <div class="w-64 h-64 rounded-lg flex justify-end" style="background-image: url(prelude.jpg);">
+                        <img src="hrt.jpg" class="w-12 h-12 p-2 rounded-full transition-transform transform hover:-translate-y-1">
+                    </div>
+                    <div class="p-2 ml-4">
+                        <div class="flex justify-between font-bold">
+                            <p class="text-3xl underline underline-offset-2">Prelude Cafe</p>
+                            <p class="text-l">(0912) 345 67890</p>
+                        </div>
+                        <div class="flex items-center ">
+                            <img src="star.png" class="w-4 h-4 mr-2">
+                            <p class="text-sm font-bold mr-1">5</p>
+                            <p class="text-sm text-gray-500">(69 Reviews)</p>
+                        </div>
+                        <p class="text-sm text-gray-700 max-w-xl mt-14">"...Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..."<span class="italic font-semibold">- Jose Rizal</span></p>
+                    </div>
+                </div>
+                <!--est3-->
+                <div class="flex rounded-lg shadow-lg transition transform hover:-translate-y-1 hover:bg-yellow-100 ">
+                    <div class="w-64 h-64 rounded-lg flex justify-end" style="background-image: url(brothers.jpg);">
+                        <img src="hrt.jpg" class="w-12 h-12 p-2 rounded-full transition-transform transform hover:-translate-y-1">
+                    </div>
+                    <div class="p-2 ml-4">
+                        <div class="flex justify-between font-bold">
+                            <p class="text-3xl underline underline-offset-2">Brother's Burger</p>
+                            <p class="text-l">(0912) 345 67890</p>
+                        </div>
+                        <div class="flex items-center ">
+                            <img src="star.png" class="w-4 h-4 mr-2">
+                            <p class="text-sm font-bold mr-1">5</p>
+                            <p class="text-sm text-gray-500">(69 Reviews)</p>
+                        </div>
+                        <p class="text-sm text-gray-700 max-w-xl mt-14">"...Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..."<span class="italic font-semibold">- Jose Rizal</span></p>
+                    </div>
+                </div>
+                <!--est1-->
+                <div class="flex rounded-lg shadow-lg transition transform hover:-translate-y-1 hover:bg-yellow-100 ">
+                    <div class="w-64 h-64 rounded-lg flex justify-end" style="background-image: url(subway.jpeg);">
+                        <img src="hrt.jpg" class="w-12 h-12 p-2 rounded-full transition-transform transform hover:-translate-y-1">
+                    </div>
+                    <div class="p-2 ml-4">
+                        <div class="flex justify-between font-bold">
+                            <p class="text-3xl underline underline-offset-2">Subway</p>
+                            <p class="text-l">(0912) 345 67890</p>
+                        </div>
+                        <div class="flex items-center ">
+                            <img src="star.png" class="w-4 h-4 mr-2">
+                            <p class="text-sm font-bold mr-1">5</p>
+                            <p class="text-sm text-gray-500">(69 Reviews)</p>
+                        </div>
+                        <p class="text-sm text-gray-700 max-w-xl mt-14">"...Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..."<span class="italic font-semibold">- Jose Rizal</span></p>
+                    </div>
+                </div>
+                <!--est1-->
+                <div class="flex rounded-lg shadow-lg transition transform hover:-translate-y-1 hover:bg-yellow-100 ">
+                    <div class="w-64 h-64 rounded-lg flex justify-end" style="background-image: url(24chk.jpg);">
+                        <img src="hrt.jpg" class="w-12 h-12 p-2 rounded-full transition-transform transform hover:-translate-y-1">
+                    </div>
+                    <div class="p-2 ml-4">
+                        <div class="flex justify-between font-bold">
+                            <p class="text-3xl underline underline-offset-2">24 Chicken</p>
+                            <p class="text-l">(0912) 345 67890</p>
+                        </div>
+                        <div class="flex items-center ">
+                            <img src="star.png" class="w-4 h-4 mr-2">
+                            <p class="text-sm font-bold mr-1">5</p>
+                            <p class="text-sm text-gray-500">(69 Reviews)</p>
+                        </div>
+                        <p class="text-sm text-gray-700 max-w-xl mt-14">"...Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..."<span class="italic font-semibold">- Jose Rizal</span></p>
+                    </div>
+                </div>
+                <!--est1-->
+                <div class="flex rounded-lg shadow-lg transition transform hover:-translate-y-1 hover:bg-yellow-100 ">
+                    <div class="w-64 h-64 rounded-lg flex justify-end" style="background-image: url(24chk.jpg);">
+                        <img src="hrt.jpg" class="w-12 h-12 p-2 rounded-full transition-transform transform hover:-translate-y-1">
+                    </div>
+                    <div class="p-2 ml-4">
+                        <div class="flex justify-between font-bold">
+                            <p class="text-3xl underline underline-offset-2">24 Chicken</p>
+                            <p class="text-l">(0912) 345 67890</p>
+                        </div>
+                        <div class="flex items-center ">
+                            <img src="star.png" class="w-4 h-4 mr-2">
+                            <p class="text-sm font-bold mr-1">5</p>
+                            <p class="text-sm text-gray-500">(69 Reviews)</p>
+                        </div>
+                        <p class="text-sm text-gray-700 max-w-xl mt-14">"...Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..."<span class="italic font-semibold">- Jose Rizal</span></p>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </main>
+    
+    
+    <!-- Footer -->
+    <footer class="w-full h-20 bg-green-800 text-white py-5 flex justify-between items-center px-5">
+        <div>© Tafteria 2024 (CCAPDEV Group 14)</div>
+        <a class="bg-yellow-500 w-32 h-10 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors" href="#">To the top</a>
+    </footer>
+
+
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            if (sidebar.style.width === "0px" || sidebar.style.width === "") {
+                sidebar.style.width = "200px";
+            } else {
+                sidebar.style.width = "0";
+            }
+        }
+    </script>
+    </body>
+    
+</html>
