@@ -1,83 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register</title>
-  <link rel="stylesheet" href="./index.css"/>
+  <meta charset="utf-8">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+  <title>Register | Tafteria</title>
 </head>
 <body>
-  
-  <header class="header">
-    <div class="left-section">
-      <div class="nav-button" onclick="toggleSidebar()"></div>
-      <a href="index.html">
-        <img class="tafteria-logo-icon" alt="Tafteria Logo" src="tafteria-logo.png">
-      </a>
+  <!-- Header -->
+  <header class="w-full bg-green-800 h-20 flex items-center justify-between px-5 text-white relative z-10">
+    <div class="flex items-center">
+        <!-- Sidebar Toggle Button -->
+        <div class="w-7 h-6 bg-no-repeat bg-center cursor-pointer" onclick="toggleSidebar()" style="background-image: url(nav-icon.png);"></div>
+        <!-- Logo -->
+        <a href="index.html">
+            <img class="w-64 h-auto ml-5" alt="Tafteria Logo" src="tafteria-logo.png">
+        </a>
     </div>
-    <div class="search-establishments">
-      <input type="text" class="label" placeholder="Search establishments...">
+    <!-- Search Bar -->
+    <div class="flex-grow max-w-md mx-5">
+        <input type="text" class="w-full h-10 rounded-lg border border-gray-300 px-4 text-black" placeholder="Search establishments...">
     </div>
-    <div class="right-section">
-      <a class="register" href="register.html" target="_self">Register</a>
-      <a class="login" href="#">Login</a>
+    <!-- Register and Login Buttons -->
+    <div class="flex items-center">
+        <a class="bg-yellow-500 w-32 h-10 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors mx-2" href="register.html">Register</a>
+        <a class="bg-yellow-500 w-32 h-10 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors mx-2" href="login.html">Login</a>
     </div>
   </header>
 
-  <!-- Sidebar -->
-  <nav id="sidebar" class="sidebar">
-    <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
-    <a href="#">Home</a>
-    <a href="#">Profile</a>
-    <a href="#">Establishments</a>
-    <a href="#">Reviews</a>
+  <!-- Sidebar Navigation -->
+  <nav id="sidebar" class="h-full fixed top-0 left-0 bg-green-900 w-0 overflow-x-hidden transition-width duration-500 pt-16 z-20">
+    <!-- Close Button -->
+    <a href="javascript:void(0)" class="absolute top-0 right-10 text-white text-3xl hover:text-yellow-500" onclick="toggleSidebar()">&times;</a>
+    <!-- Navigation Links -->
+    <a href="#" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Home</a>
+    <a href="#" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Profile</a>
+    <a href="#" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Establishments</a>
+    <a href="#" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Reviews</a>
   </nav>
 
   <div id="main" class="main-content-white">
-    <div class="min-h-screen flex flex-col justify-center items-center">
-      <div class="bg-white p-8 rounded shadow-md w-96 border-2 border-green-900">
-        <h2 class="text-2xl font-semibold mb-4">Register</h2>
-        <form action="#" method="POST">
-          <div class="mb-4">
-            <label for="username" class="block text-gray-700 text-sm font-bold mb-2">Username:</label>
-            <input type="text" id="username" name="username" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline" required>
-          </div>
-          <div class="mb-4">
-            <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password:</label>
-            <input type="password" id="password" name="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline" required>
-          </div>
-          <div class="mb-6">
-            <label for="avatar" class="block text-gray-700 text-sm font-bold mb-2">Avatar:</label>
-            <input type="file" id="avatar" name="avatar" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 cursor-pointer bg-gray-50" required>
-          </div>
-          <div class="mb-6">
-            <label for="description" class="block text-gray-700 text-sm font-bold mb-2">Short Description (Optional):</label>
-            <textarea id="description" name="description" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline" rows="3"></textarea>
-          </div>
-          <button type="submit" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-            Register
-          </button>
-        </form>
+    <div class="min-h-screen flex flex-col justify-center items-center flex items-center justify-center h-screen bg-cover bg-center" style="background-image: url(agno1.jpg);">
+      <div class="w-full h-full flex flex-col items-center justify-center bg-black bg-opacity-50 text-center text-white p-10">
+        <div class="bg-white p-8 rounded shadow-md w-96 border-2 border-green-900">
+          <h2 class="text-2xl font-semibold mb-4 text-black">Register</h2>
+          <form action="#" method="POST">
+            <div class="mb-4">
+              <label for="username" class="block text-gray-700 text-sm font-bold mb-2">Username:</label>
+              <input type="text" id="username" name="username" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline" required>
+            </div>
+            <div class="mb-4">
+              <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password:</label>
+              <input type="password" id="password" name="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline" required>
+            </div>
+            <div class="mb-6">
+              <label for="avatar" class="block text-gray-700 text-sm font-bold mb-2">Avatar:</label>
+              <input type="file" id="avatar" name="avatar" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 cursor-pointer bg-gray-50" required>
+            </div>
+            <div class="mb-6">
+              <label for="description" class="block text-gray-700 text-sm font-bold mb-2">Short Description (Optional):</label>
+              <textarea id="description" name="description" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline" rows="3"></textarea>
+            </div>
+            <button type="submit" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+              Register
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
 
-  <footer class="footer">
-    <div class="left-footer">
-      <b class="tafteria-2024">© Tafteria 2024 (CCAPDEV Group 14)</b>
-    </div>
-    <div class="right-footer"></div>
-    <div class="footer-button">
-      <a class="top-button" href="#">
-        <b class="to-the-top">To the top</b>
-      </a>
-    </div>
+  <!-- Footer Section -->
+  <footer class="w-full h-20 bg-green-800 text-white py-5 flex justify-between items-center px-5">
+    <div>© Tafteria 2024 (CCAPDEV Group 14)</div>
+    <a class="bg-yellow-500 w-32 h-10 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors" href="#">To the top</a>
   </footer>
 
+  <!-- Custom JavaScript for Sidebar Toggle -->
   <script>
     function toggleSidebar() {
-      document.getElementById("sidebar").classList.toggle("active");
+        var sidebar = document.getElementById("sidebar");
+        if (sidebar.style.width === "0px" || sidebar.style.width === "") {
+            sidebar.style.width = "250px";
+        } else {
+            sidebar.style.width = "0";
+        }
     }
   </script>
 </body>
