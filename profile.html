@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="profile.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="left-section">
+                    <div class="nav-button" onclick="toggleSidebar()"></div>
+                    <a href="index.html">
+                        <img class="tafteria-logo-icon" alt="Tafteria Logo" src="tafteria-logo.png">
+                    </a>
+                </div>
+                <div class="search-establishments">
+                    <input type="text" class="label" placeholder="Search establishments...">
+                </div>
+                <ul class="right-section">
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                </ul>
+                <img src="profile-pic.png" class="pfp-nav">
+                <div>
+
+                </div>
+                <img src="">
+            </header>
+        <nav id="sidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
+            <a href="#">Home</a>
+            <a href="#">Profile</a>
+            <a href="#">Establishments</a>
+            <a href="#">Reviews</a>
+        </nav>
+        <div id="main" class="main-content">
+            <div class="index-body-white">
+                
+                <div class="flex">
+                    <div class="in-1">
+                        <b class="discover-the-best">Profile</b>
+                        <img src="profile-pic.png" class="pfp">
+                    </div>
+                    <div class="in-2">
+                        <b class="name">Name</b>
+                        <p>Manila, Philippines</p>
+                    </div>                    
+                </div>
+                
+                
+                <div class="index-buttons">
+                    <a class="explore-button" href="#">
+                        <b class="explore-establishments">Explore Establishments</b>
+                    </a>
+                    <a class="review-button" href="#">
+                        <b class="write-review">Write a Review</b>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
