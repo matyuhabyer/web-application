@@ -18,13 +18,14 @@
         </div>
         <!-- Search Bar -->
         <div class="flex-grow max-w-md mx-5">
-            <input type="text" class="w-full h-10 rounded-lg border border-gray-300 px-4 text-black" placeholder="Search establishments...">
+            <form action="search.html" method="GET" class="flex">
+                <input type="text" name="query" class="w-full h-10 rounded-l-lg border border-gray-300 px-4 text-black" placeholder="Search establishments or reviews...">
+                <button type="submit" class="h-10 px-4 rounded-r-lg bg-yellow-500 text-white hover:bg-yellow-400 transition-colors">Search</button>
+            </form>
         </div>
-        <!-- Register and Login Buttons -->
+        <!-- Logout Button -->
         <div class="flex items-center">
-            <a class="bg-yellow-500 w-32 h-10 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors mx-2" href="#">Register</a>
-            <a class="bg-yellow-500 w-32 h-10 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors mx-2" href="#">Login</a>
-            <a class="bg-red-500 w-32 h-10 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-red-500 transition-colors mx-2" href="login.html">Logout</a>
+            <a class="bg-red-500 w-32 h-9 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-red-500 transition-colors mx-2" href="login.html">Logout</a>
         </div>
     </header>
     <!-- Sidebar Navigation -->
@@ -37,142 +38,156 @@
         <a href="establishments.html" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Establishments</a>
         <a href="#" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Reviews</a>
     </nav>
-    <main>
-        <div id="establishments" class="bg-white-500 p-5 flex justify-center">
-            <div id="reviews-box" class="w-1/2 bg-white p-5 rounded-lg grid grid-row gap-4">
-                <!--est1-->
-                <a href="24chicken-page.html">
-                    <div class="flex rounded-lg shadow-lg transition transform hover:-translate-y-1 hover:bg-yellow-100">
-                        <div class="w-64 h-64 rounded-lg flex justify-end" style="background-image: url(24chk.jpg);">
-                            <img src="hrt.jpg" class="w-12 h-12 p-2 rounded-full transition-transform transform hover:-translate-y-1">
-                        </div>
-                        <div class="p-2 ml-4">
-                            <div class="flex justify-between font-bold">
-                                <p class="text-3xl underline underline-offset-2">24 Chicken</p>
-                                <p class="text-l">(0912) 345 67890</p>
+    <main class="flex items-center justify-center h-full bg-cover bg-center text-black" style="background-image: url(agno1.jpg);">
+        <div class="w-full h-full flex flex-col items-center justify-center bg-black bg-opacity-50 text-center text-black p-10">
+            <div id="establishments" class="bg-white-500 p-5 flex justify-center w-full">
+                <div id="reviews-box" class="w-screen bg-white p-5 rounded-lg grid grid-row gap-4">
+                    <h2 class="text-4xl font-bold mb-5 text-center">Taft Establishments</h2>
+                    <!--est1-->
+                    <a href="24chicken-page.html">
+                        <div class="flex rounded-lg shadow-lg transition transform hover:-translate-y-1 hover:bg-yellow-100">
+                            <div class="w-1/2 h-64 rounded-lg flex justify-end bg-cover" style="background-image: url(24chk.jpg);">
+                                <img src="hrt.jpg" class="w-12 h-12 p-2 rounded-full transition-transform transform hover:-translate-y-1">
                             </div>
-                            <div class="flex items-center ">
-                                <img src="star.png" class="w-4 h-4 mr-2">
-                                <p class="text-sm font-bold mr-1">5</p>
-                                <p class="text-sm text-gray-500">(69 Reviews)</p>
+                            <div class="p-2 ml-4 w-full">
+                                <div class="flex justify-between font-bold">
+                                    <p class="text-3xl underline underline-offset-2">24 Chicken</p>
+                                    <p class="text-l mt-5">(0912) 345 67890</p>
+                                </div>
+                                <div class="flex items-center ">
+                                    <div class="text-yellow-400 text-2xl mr-2">
+                                        &#9733
+                                    </div>
+                                    <p class="text-sm font-bold mr-1">5</p>
+                                    <p class="text-sm text-gray-500">(69 Reviews)</p>
+                                </div>
+                                <p class="text-sm text-gray-700 mt-14">"...24 Chicken offers some of the best Korean fried chicken I've had. 
+                                    The Soy Garlic flavor is my favorite—crispy on the outside and juicy on the inside with just the right amount of sweetness...."<span class="italic font-semibold">- Jungkook</span></p>
                             </div>
-                            <p class="text-sm text-gray-700 max-w-xl mt-14">"...24 Chicken offers some of the best Korean fried chicken I've had. 
-                                The Soy Garlic flavor is my favorite—crispy on the outside and juicy on the inside with just the right amount of sweetness...."<span class="italic font-semibold">- Jungkook</span></p>
                         </div>
-                    </div>
-                </a>
-                
-                <!--est2-->
-                <a href="#">
-                    <div class="flex rounded-lg shadow-lg transition transform hover:-translate-y-1 hover:bg-yellow-100 ">
-                        <div class="w-64 h-64 rounded-lg flex justify-end" style="background-image: url(prelude.jpg);">
-                            <img src="hrt.jpg" class="w-12 h-12 p-2 rounded-full transition-transform transform hover:-translate-y-1">
-                        </div>
-                        <div class="p-2 ml-4">
-                            <div class="flex justify-between font-bold">
-                                <p class="text-3xl underline underline-offset-2">Prelude Cafe</p>
-                                <p class="text-l">(0912) 345 67890</p>
+                    </a>
+                    
+                    <!--est2-->
+                    <a href="#">
+                        <div class="flex rounded-lg shadow-lg transition transform hover:-translate-y-1 hover:bg-yellow-100 ">
+                            <div class="w-1/2 h-64 rounded-lg flex justify-end bg-cover" style="background-image: url(prelude.jpg);">
+                                <img src="hrt.jpg" class="w-12 h-12 p-2 rounded-full transition-transform transform hover:-translate-y-1">
                             </div>
-                            <div class="flex items-center">
-                                <img src="star.png" class="w-4 h-4 mr-2">
-                                <p class="text-sm font-bold mr-1">5</p>
-                                <p class="text-sm text-gray-500">(69 Reviews)</p>
+                            <div class="p-2 ml-4 w-full">
+                                <div class="flex justify-between font-bold">
+                                    <p class="text-3xl underline underline-offset-2">Prelude Cafe</p>
+                                    <p class="text-l mt-5">(0912) 345 67890</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="text-yellow-400 text-2xl mr-2">
+                                        &#9733
+                                    </div>
+                                    <p class="text-sm font-bold mr-1">5</p>
+                                    <p class="text-sm text-gray-500">(69 Reviews)</p>
+                                </div>
+                                <p class="text-sm text-gray-700 mt-14">"...Prelude Cafe is a wonderful place to unwind. Their pastries and coffee are exceptional. 
+                                    I had the almond croissant and a cappuccino, and both were delightful..."<span class="italic font-semibold">- Luka Doncic</span></p>
                             </div>
-                            <p class="text-sm text-gray-700 max-w-xl mt-14">"...Prelude Cafe is a wonderful place to unwind. Their pastries and coffee are exceptional. 
-                                I had the almond croissant and a cappuccino, and both were delightful..."<span class="italic font-semibold">- Luka Doncic</span></p>
                         </div>
-                    </div>
-                </a>
-                
-                <!--est3-->
-                <a href="#">
-                    <div class="flex rounded-lg shadow-lg transition transform hover:-translate-y-1 hover:bg-yellow-100 ">
-                        <div class="w-64 h-64 rounded-lg flex justify-end" style="background-image: url(brothers.jpg);">
-                            <img src="hrt.jpg" class="w-12 h-12 p-2 rounded-full transition-transform transform hover:-translate-y-1">
-                        </div>
-                        <div class="p-2 ml-4">
-                            <div class="flex justify-between font-bold">
-                                <p class="text-3xl underline underline-offset-2">Brother's Burger</p>
-                                <p class="text-l">(0912) 345 67890</p>
+                    </a>
+                    
+                    <!--est3-->
+                    <a href="#">
+                        <div class="flex rounded-lg shadow-lg transition transform hover:-translate-y-1 hover:bg-yellow-100 ">
+                            <div class="w-1/2 h-64 rounded-lg flex justify-end bg-center bg-cover" style="background-image: url(brothers.jpg);">
+                                <img src="hrt.jpg" class="w-12 h-12 p-2 rounded-full transition-transform transform hover:-translate-y-1">
                             </div>
-                            <div class="flex items-center ">
-                                <img src="star.png" class="w-4 h-4 mr-2">
-                                <p class="text-sm font-bold mr-1">5</p>
-                                <p class="text-sm text-gray-500">(69 Reviews)</p>
+                            <div class="p-2 ml-4 w-full">
+                                <div class="flex justify-between font-bold">
+                                    <p class="text-3xl underline underline-offset-2">Brother's Burger</p>
+                                    <p class="text-l">(0912) 345 67890</p>
+                                </div>
+                                <div class="flex items-center ">
+                                    <div class="text-yellow-400 text-2xl mr-2">
+                                        &#9733
+                                    </div>
+                                    <p class="text-sm font-bold mr-1">5</p>
+                                    <p class="text-sm text-gray-500">(69 Reviews)</p>
+                                </div>
+                                <p class="text-sm text-gray-700 mt-14">"...The burgers at Brother's Burger are top-notch. 
+                                    I tried the Big Brother Burger and it was juicy, flavorful, and stacked high with fresh toppings...."<span class="italic font-semibold">- Vice Ganda</span></p>
                             </div>
-                            <p class="text-sm text-gray-700 max-w-xl mt-14">"...The burgers at Brother's Burger are top-notch. 
-                                I tried the Big Brother Burger and it was juicy, flavorful, and stacked high with fresh toppings...."<span class="italic font-semibold">- Vice Ganda</span></p>
                         </div>
-                    </div>
-                </a>
-                
-                <!--est4-->
-                <a href="#">
-                    <div class="flex rounded-lg shadow-lg transition transform hover:-translate-y-1 hover:bg-yellow-100 ">
-                        <div class="w-64 h-64 rounded-lg flex justify-end" style="background-image: url(subway.jpeg);">
-                            <img src="hrt.jpg" class="w-12 h-12 p-2 rounded-full transition-transform transform hover:-translate-y-1">
-                        </div>
-                        <div class="p-2 ml-4">
-                            <div class="flex justify-between font-bold">
-                                <p class="text-3xl underline underline-offset-2">Subway</p>
-                                <p class="text-l">(0912) 345 67890</p>
+                    </a>
+                    
+                    <!--est4-->
+                    <a href="#">
+                        <div class="flex rounded-lg shadow-lg transition transform hover:-translate-y-1 hover:bg-yellow-100 ">
+                            <div class="w-1/2 h-64 rounded-lg flex justify-end bg-center bg-cover" style="background-image: url(subway.jpeg);">
+                                <img src="hrt.jpg" class="w-12 h-12 p-2 rounded-full transition-transform transform hover:-translate-y-1">
                             </div>
-                            <div class="flex items-center ">
-                                <img src="star.png" class="w-4 h-4 mr-2">
-                                <p class="text-sm font-bold mr-1">5</p>
-                                <p class="text-sm text-gray-500">(69 Reviews)</p>
+                            <div class="p-2 ml-4 w-full">
+                                <div class="flex justify-between font-bold">
+                                    <p class="text-3xl underline underline-offset-2">Subway</p>
+                                    <p class="text-l">(0912) 345 67890</p>
+                                </div>
+                                <div class="flex items-center ">
+                                    <div class="text-yellow-400 text-2xl mr-2">
+                                        &#9733
+                                    </div>
+                                    <p class="text-sm font-bold mr-1">5</p>
+                                    <p class="text-sm text-gray-500">(69 Reviews)</p>
+                                </div>
+                                <p class="text-sm text-gray-700 mt-14">"...Subway never disappoints with their fresh ingredients and customizable options. 
+                                    I had the Chicken Teriyaki sub and it was packed with flavor...."<span class="italic font-semibold">- Albert Einstein</span></p>
                             </div>
-                            <p class="text-sm text-gray-700 max-w-xl mt-14">"...Subway never disappoints with their fresh ingredients and customizable options. 
-                                I had the Chicken Teriyaki sub and it was packed with flavor...."<span class="italic font-semibold">- Albert Einstein</span></p>
                         </div>
-                    </div>
-                </a>
-                
-                <!--est5-->
-                <a href="">
-                    <div class="flex rounded-lg shadow-lg transition transform hover:-translate-y-1 hover:bg-yellow-100 ">
-                        <div class="w-64 h-64 rounded-lg flex justify-end" style="background-image: url(bcs.png);">
-                            <img src="hrt.jpg" class="w-12 h-12 p-2 rounded-full transition-transform transform hover:-translate-y-1">
-                        </div>
-                        <div class="p-2 ml-4">
-                            <div class="flex justify-between font-bold">
-                                <p class="text-3xl underline underline-offset-2">Ate Rica's Bacsilog</p>
-                                <p class="text-l">(0912) 345 67890</p>
+                    </a>
+                    
+                    <!--est5-->
+                    <a href="">
+                        <div class="flex rounded-lg shadow-lg transition transform hover:-translate-y-1 hover:bg-yellow-100 ">
+                            <div class="w-1/2 h-64 rounded-lg flex justify-end bg-center bg-cover" style="background-image: url(bcs.png);">
+                                <img src="hrt.jpg" class="w-12 h-12 p-2 rounded-full transition-transform transform hover:-translate-y-1">
                             </div>
-                            <div class="flex items-center ">
-                                <img src="star.png" class="w-4 h-4 mr-2">
-                                <p class="text-sm font-bold mr-1">5</p>
-                                <p class="text-sm text-gray-500">(69 Reviews)</p>
+                            <div class="p-2 ml-4 w-full">
+                                <div class="flex justify-between font-bold">
+                                    <p class="text-3xl underline underline-offset-2">Ate Rica's Bacsilog</p>
+                                    <p class="text-l">(0912) 345 67890</p>
+                                </div>
+                                <div class="flex items-center ">
+                                    <div class="text-yellow-400 text-2xl mr-2">
+                                        &#9733
+                                    </div>
+                                    <p class="text-sm font-bold mr-1">5</p>
+                                    <p class="text-sm text-gray-500">(69 Reviews)</p>
+                                </div>
+                                <p class="text-sm text-gray-700 mt-14">"...Ate Rica's Bacsilog is the ultimate comfort food! The bacon was crispy and flavorful, the egg perfectly cooked, 
+                                    and the garlic rice was just the right amount of garlicky..."<span class="italic font-semibold">- Jose Rizal</span></p>
                             </div>
-                            <p class="text-sm text-gray-700 max-w-xl mt-14">"...Ate Rica's Bacsilog is the ultimate comfort food! The bacon was crispy and flavorful, the egg perfectly cooked, 
-                                and the garlic rice was just the right amount of garlicky..."<span class="italic font-semibold">- Jose Rizal</span></p>
                         </div>
-                    </div>
-                </a>
-                
-                <!--est6-->
-                <a href="">
-                    <div class="flex rounded-lg shadow-lg transition transform hover:-translate-y-1 hover:bg-yellow-100 ">
-                        <div class="w-64 h-64 rounded-lg flex justify-end" style="background-image: url(mongolian.jpg);">
-                            <img src="hrt.jpg" class="w-12 h-12 p-2 rounded-full transition-transform transform hover:-translate-y-1">
-                        </div>
-                        <div class="p-2 ml-4">
-                            <div class="flex justify-between font-bold">
-                                <p class="text-3xl underline underline-offset-2">Mongolian Master</p>
-                                <p class="text-l">(0912) 345 67890</p>
+                    </a>
+                    
+                    <!--est6-->
+                    <a href="">
+                        <div class="flex rounded-lg shadow-lg transition transform hover:-translate-y-1 hover:bg-yellow-100 ">
+                            <div class="w-1/2 h-64 rounded-lg flex justify-end bg-center bg-cover" style="background-image: url(mongolian.jpg);">
+                                <img src="hrt.jpg" class="w-12 h-12 p-2 rounded-full transition-transform transform hover:-translate-y-1">
                             </div>
-                            <div class="flex items-center ">
-                                <img src="star.png" class="w-4 h-4 mr-2">
-                                <p class="text-sm font-bold mr-1">5</p>
-                                <p class="text-sm text-gray-500">(69 Reviews)</p>
+                            <div class="p-2 ml-4 w-full">
+                                <div class="flex justify-between font-bold">
+                                    <p class="text-3xl underline underline-offset-2">Mongolian Master</p>
+                                    <p class="text-l">(0912) 345 67890</p>
+                                </div>
+                                <div class="flex items-center ">
+                                    <div class="text-yellow-400 text-2xl mr-2">
+                                        &#9733
+                                    </div>
+                                    <p class="text-sm font-bold mr-1">5</p>
+                                    <p class="text-sm text-gray-500">(69 Reviews)</p>
+                                </div>
+                                <p class="text-sm text-gray-700 mt-14">"...Mongolian Master offers a fantastic DIY stir-fry experience.
+                                     I loaded my bowl with a variety of meats, veggies, and sauces, and it was cooked to perfection...."<span class="italic font-semibold">- Gordon Ramsay</span></p>
                             </div>
-                            <p class="text-sm text-gray-700 max-w-xl mt-14">"...Mongolian Master offers a fantastic DIY stir-fry experience.
-                                 I loaded my bowl with a variety of meats, veggies, and sauces, and it was cooked to perfection...."<span class="italic font-semibold">- Gordon Ramsay</span></p>
                         </div>
-                    </div>
-                </a>
-                
-            </div>  
+                    </a>
+                </div>  
+            </div>
         </div>
     </main>
     
@@ -180,7 +195,7 @@
     <!-- Footer -->
     <footer class="w-full h-20 bg-green-800 text-white py-5 flex justify-between items-center px-5">
         <div>© Tafteria 2024 (CCAPDEV Group 14)</div>
-        <a class="bg-yellow-500 w-32 h-10 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors" href="#">To the top</a>
+        <a class="bg-yellow-500 w-32 h-9 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors" href="#">To the top</a>
     </footer>
 
 
