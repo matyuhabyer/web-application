@@ -19,13 +19,15 @@
         </div>
         <!-- Search Bar -->
         <div class="flex-grow max-w-md mx-5">
-            <input type="text" class="w-full h-10 rounded-lg border border-gray-300 px-4 text-black" placeholder="Search establishments...">
+            <form action="search.html" method="GET" class="flex">
+                <input type="text" name="query" class="w-full h-10 rounded-l-lg border border-gray-300 px-4 text-black" placeholder="Search establishments or reviews...">
+                <button type="submit" class="h-10 px-4 rounded-r-lg bg-yellow-500 text-white hover:bg-yellow-400 transition-colors">Search</button>
+            </form>
         </div>
         <!-- Register and Login Buttons -->
         <div class="flex items-center">
-            <a class="bg-yellow-500 w-32 h-10 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors mx-2" href="register.html">Register</a>
-            <a class="bg-yellow-500 w-32 h-10 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors mx-2" href="login.html">Login</a>
-            <a class="bg-red-500 w-32 h-10 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-red-500 transition-colors mx-2" href="login.html">Logout</a>
+            <a class="bg-yellow-500 w-32 h-9 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors mx-2" href="register.html">Register</a>
+            <a class="bg-yellow-500 w-32 h-9 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors mx-2" href="login.html">Login</a>
         </div>
     </header>
 
@@ -59,8 +61,8 @@
     <div id="main" class="flex flex-col items-center justify-end h-100 bg-yellow-500 p-10">
         <div class="flex flex-col md:flex-row gap-10 mb-20">
             <!-- Featured Establishments -->
-            <div class="w-full md:w-1/2 bg-white rounded-lg p-5 shadow-lg overflow-y-scroll">
-                <h2 class="text-4xl font-bold mb-5">Featured Establishments</h2>
+            <div class="w-full bg-white p-5 shadow-lg overflow-y-scroll h-screen">
+                <h2 class="text-5xl font-bold mb-5 text-center">Featured Establishments</h2>
                 <div class="space-y-5">
                     <!-- Establishment Card 1 -->
                     <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:-translate-y-1">
@@ -90,48 +92,48 @@
                     </div>
                     <!-- Establishment Card 3 -->
                     <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:-translate-y-1">
-                        <img src="bacsilog.jpg" class="w-full h-64 object-cover">
+                        <img src="mongolian.jpg" class="w-full h-64 object-cover">
                         <div class="p-5">
                             <div class="flex items-center text-sm text-gray-500 mb-2">
                                 <img src="star.png" class="w-4 h-4 mr-1">
                                 <span class="mr-1">4.3</span>
                                 <span>(80 reviews)</span>
                             </div>
-                            <h3 class="text-xl font-bold mb-2">Mongolian</h3>
+                            <h3 class="text-xl font-bold mb-2">Mongolian Master</h3>
                             <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
                     </div>
                     <!-- Establishment Card 4 -->
                     <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:-translate-y-1">
-                        <img src="bacsilog.jpg" class="w-full h-64 object-cover">
+                        <img src="prelude.jpg" class="w-full h-64 object-cover">
                         <div class="p-5">
                             <div class="flex items-center text-sm text-gray-500 mb-2">
                                 <img src="star.png" class="w-4 h-4 mr-1">
                                 <span class="mr-1">4.3</span>
                                 <span>(80 reviews)</span>
                             </div>
-                            <h3 class="text-xl font-bold mb-2">LS Canteen</h3>
+                            <h3 class="text-xl font-bold mb-2">Prelude Cafe</h3>
                             <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
                     </div>
                     <!-- Establishment Card 5 -->
                     <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:-translate-y-1">
-                        <img src="bacsilog.jpg" class="w-full h-64 object-cover">
+                        <img src="subway.jpeg" class="w-full h-64 object-cover">
                         <div class="p-5">
                             <div class="flex items-center text-sm text-gray-500 mb-2">
                                 <img src="star.png" class="w-4 h-4 mr-1">
                                 <span class="mr-1">4.3</span>
                                 <span>(80 reviews)</span>
                             </div>
-                            <h3 class="text-xl font-bold mb-2">Andrew Canteen</h3>
+                            <h3 class="text-xl font-bold mb-2">Subway</h3>
                             <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Recent Reviews -->
-            <div class="w-full md:w-1/2 bg-white rounded-lg p-5 shadow-lg overflow-y-scroll rounded-xl">
-                <h2 class="text-4xl font-bold mb-5">Recent Reviews</h2>
+            <div class="w-full md:w-1/2 bg-white p-5 shadow-lg overflow-y-scroll h-screen">
+                <h2 class="text-center text-5xl font-bold mb-5">Recent Reviews</h2>
                 <div class="space-y-5">
                     <!-- Review Card 1 -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:-translate-y-1 p-5">
@@ -280,7 +282,7 @@
     <!-- Footer Section -->
     <footer class="w-full h-20 bg-green-800 text-white py-5 flex justify-between items-center px-5">
         <div>© Tafteria 2024 (CCAPDEV Group 14)</div>
-        <a class="bg-yellow-500 w-32 h-10 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors" href="#">To the top</a>
+        <a class="bg-yellow-500 w-32 h-9 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors" href="#">To the top</a>
     </footer>
 
     <!-- Sidebar Toggle -->
