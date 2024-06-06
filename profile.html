@@ -1,63 +1,101 @@
 <!DOCTYPE html>
 
-<html>
-    <head>
+<html lang="en">
+    <!-- Head Section -->
+    <head>        
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="profile.css">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
     </head>
-    <body>
-        <header class="header">
-            <div class="left-section">
-                    <div class="nav-button" onclick="toggleSidebar()"></div>
+    <!-- Body Section -->
+    <body class="font-sans bg-gray-100">
+        <!-- Header Section -->
+        <header class="w-full bg-green-800 h-20 flex items-center justify-between px-5 text-white relative z-10">
+            <div class="flex items-center">
+                    <!-- Sidebar Toggle Button -->
+                    <div class="w-7 h-6 bg-no-repeat bg-center cursor-pointer" onclick="toggleSidebar()" style="background-image: url(nav-icon.png);"></div>
+                    <!-- Logo -->
                     <a href="index.html">
-                        <img class="tafteria-logo-icon" alt="Tafteria Logo" src="tafteria-logo.png">
+                        <img class="w-64 h-auto ml-5" alt="Tafteria Logo" src="tafteria-logo.png">
                     </a>
-                </div>
-                <div class="search-establishments">
-                    <input type="text" class="label" placeholder="Search establishments...">
-                </div>
-                <ul class="right-section">
-                    <li><a href="register.html">Register</a></li>
-                    <li><a href="login.html">Log In</a></li>
-                </ul>
-                <img src="profile-pic.png" class="pfp-nav">
-                <div>
-
-                </div>
-                <img src="">
-            </header>
-        <nav id="sidebar" class="sidebar">
-            <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
-            <a href="#">Home</a>
-            <a href="#">Profile</a>
-            <a href="#">Establishments</a>
-            <a href="#">Reviews</a>
+            </div>
+            <!-- Search Bar-->
+            <div class="flex-grow max-w-md mx-5">
+                <input type="text" class="w-full h-10 rounded-lg border border-gray-300 px-4 text-black" placeholder="Search establishments...">
+            </div>
+            <!-- Register and Login Buttons -->
+            <div class="flex items-center">
+                <a class="bg-yellow-500 w-32 h-10 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors mx-2" href="register.html">Register</a>
+                <a class="bg-yellow-500 w-32 h-10 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors mx-2" href="login.html">Login</a>
+            </div>
+            <img src="profile-pic.png" class="w-12">                
+        </header>
+        <!-- Sidebar Navigation -->
+        <nav id="sidebar" class="h-full fixed top-0 left-0 bg-green-900 w-0 overflow-x-hidden transition-width duration-500 pt-16 z-20">
+            <!-- Close Button -->
+            <a href="javascript:void(0)" class="absolute top-0 right-10 text-white text-3xl hover:text-yellow-500" onclick="toggleSidebar()">&times;</a>
+            <!-- Navigation Links -->
+            <a href="index.html" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Home</a>
+            <a href="profile.html" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Profile</a>
+            <a href="establishments.html" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Establishments</a>
+            <a href="#" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Reviews</a>
         </nav>
-        <div id="main" class="main-content">
-            <div class="index-body-white">
+        <!-- Main Section -->
+    <div id="main" class="flex items-center justify-center h-screen bg-cover bg-center" style="background-image: url(agno1.jpg);">
+        <div class="w-full h-full flex flex-col items-center justify-center bg-black bg-opacity-50 text-center text-white p-10">
+            <div class="w-11/12 relative h-auto overflow-hidden text-gray-800 bg-white rounded-tr-2xl">
+                <!-- Main Title -->
+            <h1 class="text-5xl md:text-5xl font-bold mb-10 text-center">
+                Profile
                 
+            </h1>
+                
+            <!-- Main Subtitle -->
+            <p class="text-2xl md:text-4xl font-light m-auto w-9/12 text-center">Juan Alejandro Mar</p>
+                <img src="profile-pic.png" class="h-40 ml-5 mt-5 mb-5">
                 <div class="flex">
                     <div class="in-1">
-                        <b class="discover-the-best">Profile</b>
-                        <img src="profile-pic.png" class="pfp">
+                        <b class="discover-the-best"></b>
+                        
                     </div>
                     <div class="in-2">
-                        <b class="name">Name</b>
-                        <p>Manila, Philippines</p>
+                        <b class="name"></b>
+                        <p></p>
                     </div>                    
                 </div>
                 
                 
-                <div class="index-buttons">
-                    <a class="explore-button" href="#">
-                        <b class="explore-establishments">Explore Establishments</b>
+                <div class="flex-row mb-3 ml-24">
+                    <a class="bg-green-800 w-32 h-10 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors mx-2" href="#">
+                        <p class="explore-establishments">Explore Establishments</p>
                     </a>
-                    <a class="review-button" href="#">
-                        <b class="write-review">Write a Review</b>
+                    <br>
+                    <a class="bg-yellow-500 w-32 h-10 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors mx-2" href="#">
+                        <p class="write-review">Write a Review</p>
                     </a>
                 </div>
             </div>
         </div>
+            
+    </div>
+        <!-- Footer Section -->
+        <footer class="w-full h-20 bg-green-800 text-white py-5 flex justify-between items-center px-5">
+            <div>© Tafteria 2024 (CCAPDEV Group 14)</div>
+            <a class="bg-yellow-500 w-32 h-10 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors" href="#">To the top</a>
+        </footer>
+    
+        <!-- Sidebar Toggle -->
+        <script>
+            function toggleSidebar() {
+                var sidebar = document.getElementById("sidebar");
+                if (sidebar.style.width === "0px" || sidebar.style.width === "") {
+                    sidebar.style.width = "250px";
+                } else {
+                    sidebar.style.width = "0";
+                }
+            }
+        </script>
+
     </body>
 </html>
