@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Write a Review | Tafteria</title>
+</head>
+<body class="bg-gray-100 leading-normal tracking-normal">
+    <!-- Header Section -->
+    <header class="w-full bg-green-800 h-20 flex items-center justify-between px-5 text-white relative z-10">
+        <div class="flex items-center">
+            <!-- Sidebar Toggle Button -->
+            <div class="w-7 h-6 bg-no-repeat bg-center cursor-pointer" onclick="toggleSidebar()" style="background-image: url(nav-icon.png);"></div>
+            <!-- Logo -->
+            <a href="index.html">
+                <img class="w-64 h-auto ml-5" alt="Tafteria Logo" src="tafteria-logo.png">
+            </a>
+        </div>
+        <!-- Search Bar -->
+        <div class="flex-grow max-w-md mx-5">
+            <form action="search.html" method="GET" class="flex">
+                <input type="text" name="query" class="w-full h-10 rounded-l-lg border border-gray-300 px-4 text-black" placeholder="Search establishments or reviews...">
+                <button type="submit" class="h-10 px-4 rounded-r-lg bg-yellow-500 text-white hover:bg-yellow-400 transition-colors">Search</button>
+            </form>
+        </div>
+        <!-- Logout Button -->
+        <div class="flex items-center">
+            <a class="bg-red-500 w-32 h-9 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-red-500 transition-colors mx-2" href="login.html">Logout</a>
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar" class="h-full fixed top-0 left-0 bg-green-900 w-0 overflow-x-hidden transition-width duration-500 pt-16 z-20">
+        <!-- Close Button -->
+        <a href="javascript:void(0)" class="absolute top-0 right-10 text-white text-3xl hover:text-yellow-500" onclick="toggleSidebar()">&times;</a>
+        <!-- Navigation Links -->
+        <a href="index.html" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Home</a>
+        <a href="profile.html" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Profile</a>
+        <a href="establishments.html" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Establishments</a>
+    </nav>
+
+    <!-- Main Section -->
+    <div id="main" class="flex items-center justify-center h-screen bg-cover bg-center" style="background-image: url(agno1.jpg);">
+        <div class="w-full h-full flex flex-col items-center justify-center bg-black bg-opacity-50 text-center text-white p-10">
+            <div class="container mx-auto my-8 p-4 bg-white rounded-lg shadow-md text-black place-content-center">
+                <h1 class="text-3xl font-bold mb-4">Write a Review</h1>
+                <form id="reviewForm" class="space-y-4">
+                    <div>
+                        <label for="establishment" class="block font-semibold">Establishment:</label>
+                        <select id="establishment" name="establishment" class="w-full h-10 rounded-lg border border-gray-300 px-4" required>
+                            <option value="">Select an establishment</option>
+                            <option value="24 Chicken">24 Chicken</option>
+                            <option value="Ate Rica's Bacsilog">Ate Rica's Bacsilog</option>
+                            <option value="Mongolian Master">Mongolian Master</option>
+                            <option value="Prelude Cafe">Prelude Cafe</option>
+                            <option value="Subway">Subway</option>
+                            <!-- More Options -->
+                        </select>
+                    </div>
+                    <div>
+                        <label for="rating" class="block font-semibold">Rating:</label>
+                        <select id="rating" name="rating" class="w-full h-10 rounded-lg border border-gray-300 px-4" required>
+                            <option value="">Select a rating</option>
+                            <option value="5">5 stars</option>
+                            <option value="4">4 stars</option>
+                            <option value="3">3 stars</option>
+                            <option value="2">2 stars</option>
+                            <option value="1">1 star</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="comment" class="block font-semibold">Comment:</label>
+                        <textarea id="comment" name="comment" class="w-full rounded-lg border border-gray-300 px-4 py-2" rows="5" placeholder="Write your review here" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-green-500 text-white font-bold py-2 px-4 rounded">Submit Review</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="w-full h-20 bg-green-800 text-white py-5 flex justify-between items-center px-5">
+        <div>© Tafteria 2024 (CCAPDEV Group 14)</div>
+        <a class="bg-yellow-500 w-32 h-9 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors" href="#">To the top</a>
+    </footer>
+
+    <!-- Sidebar Toggle -->
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            if (sidebar.style.width === "0px" || sidebar.style.width === "") {
+                sidebar.style.width = "250px";
+            } else {
+                sidebar.style.width = "0";
+            }
+        }
+    </script>
+</body>
+</html>

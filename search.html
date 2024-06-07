@@ -39,80 +39,40 @@
         <a href="index.html" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Home</a>
         <a href="profile.html" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Profile</a>
         <a href="establishments.html" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Establishments</a>
-        <a href="#" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Reviews</a>
     </nav>
 
-    <!-- Main Section -->
-    <div id="main" class="flex items-center justify-center h-full bg-cover bg-center" style="background-image: url(agno1.jpg);">
-        <div class="w-full h-full flex flex-col items-center justify-center bg-black bg-opacity-50 text-white p-10">
+        <!-- Main Section -->
+    <div class="flex items-center justify-center h-full bg-cover bg-center" style="background-image: url(agno1.jpg);">
+        <div class="w-screen h-full flex flex-col items-center justify-center bg-black bg-opacity-50 text-white p-10">
             <div class="flex flex-col items-center justify-center py-10">
                 <h1 class="text-5xl font-bold mb-5">Search Results</h1>
                 <p class="text-2xl mb-10 font-bold">Results for "<span id="search-query" class="font-semibold"></span>"</p>
-        
-                <div class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10 px-5">
-                    <!-- Establishment Result 1 -->
-                    <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:-translate-y-1 text-black">
-                        <img src="24chicken.jpg" class="w-full h-64 object-cover">
-                        <div class="p-5">
-                            <div class="flex items-center text-sm text-gray-500 mb-2">
-                                <div class="text-yellow-400 text-2xl mr-2">&#9733;</div>
-                                <span class="mr-1">4.5</span>
-                                <span>(100 reviews)</span>
-                            </div>
-                            <h3 class="text-xl font-bold mb-2">24 Chicken</h3>
-                            <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                <!-- Filters -->
+                <div class="w-full flex justify-end mb-5">
+                    <select id="rating-filter" class="h-10 px-4 rounded-lg border border-gray-300 text-black">
+                        <option value="all">All Ratings</option>
+                        <option value="4.5">4.5 & Up</option>
+                        <option value="4.0">4.0 & Up</option>
+                        <option value="3.5">3.5 & Up</option>
+                    </select>
+                </div>
+
+                <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-10 px-5">
+                   <!-- Establishment Results -->
+                    <div id="establishment-results" class="col-span-1 md:col-span-2">
+                        <h2 class="text-3xl font-bold mb-5">Establishments</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-black">
+                            <!-- Placeholder for establishment results -->
+                            <div id="establishment-results-container"></div>
                         </div>
                     </div>
-                    <!-- Establishment Result 2 -->
-                    <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:-translate-y-1 text-black">
-                        <img src="bacsilog.jpg" class="w-full h-64 object-cover">
-                        <div class="p-5">
-                            <div class="flex items-center text-sm text-gray-500 mb-2">
-                                <div class="text-yellow-400 text-2xl mr-2">&#9733;</div>
-                                <span class="mr-1">4.3</span>
-                                <span>(80 reviews)</span>
-                            </div>
-                            <h3 class="text-xl font-bold mb-2">Ate Rica's Bacsilog</h3>
-                            <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                    <!-- Establishment Result 3 -->
-                    <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:-translate-y-1 text-black">
-                        <img src="mongolian.jpg" class="w-full h-64 object-cover">
-                        <div class="p-5">
-                            <div class="flex items-center text-sm text-gray-500 mb-2">
-                                <div class="text-yellow-400 text-2xl mr-2">&#9733;</div>
-                                <span class="mr-1">4.3</span>
-                                <span>(80 reviews)</span>
-                            </div>
-                            <h3 class="text-xl font-bold mb-2">Mongolian Master</h3>
-                            <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                    <!-- Establishment Result 4 -->
-                    <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:-translate-y-1 text-black">
-                        <img src="prelude.jpg" class="w-full h-64 object-cover">
-                        <div class="p-5">
-                            <div class="flex items-center text-sm text-gray-500 mb-2">
-                                <div class="text-yellow-400 text-2xl mr-2">&#9733;</div>
-                                <span class="mr-1">4.3</span>
-                                <span>(80 reviews)</span>
-                            </div>
-                            <h3 class="text-xl font-bold mb-2">Prelude Cafe</h3>
-                            <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                    <!-- Establishment Result 5 -->
-                    <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:-translate-y-1 text-black">
-                        <img src="subway.jpeg" class="w-full h-64 object-cover">
-                        <div class="p-5">
-                            <div class="flex items-center text-sm text-gray-500 mb-2">
-                                <div class="text-yellow-400 text-2xl mr-2">&#9733;</div>
-                                <span class="mr-1">4.3</span>
-                                <span>(80 reviews)</span>
-                            </div>
-                            <h3 class="text-xl font-bold mb-2">Subway</h3>
-                            <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                    <!-- Review Results -->
+                    <div id="review-results" class="col-span-1 md:col-span-2">
+                        <h2 class="text-3xl font-bold mb-5">Reviews</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-black">
+                            <!-- Placeholder for review results -->
                         </div>
                     </div>
                 </div>
@@ -126,7 +86,6 @@
         <a class="bg-yellow-500 w-32 h-9 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors" href="#">To the top</a>
     </footer>
 
-    <!-- Sidebar Toggle -->
     <script>
         function toggleSidebar() {
             var sidebar = document.getElementById("sidebar");
@@ -137,12 +96,95 @@
             }
         }
 
-        // Script to extract search query from URL and display it
+        const establishments = [
+            { name: "24 Chicken", description: "Korean fried chicken", rating: 4.5, reviews: 100, image: "24chicken.jpg", link: "24chicken-page.html" },
+            { name: "Ate Rica's Bacsilog", description: "Filipino comfort food", rating: 4.3, reviews: 80, image: "bacsilog.jpg", link: "bacsilog-page.html" },
+            { name: "Mongolian Master", description: "Mongolian barbecue", rating: 4.3, reviews: 80, image: "mongolian.jpg", link: "mongolian-page.html" },
+            { name: "Prelude Cafe", description: "Cozy coffee shop", rating: 4.3, reviews: 80, image: "prelude.jpg", link: "prelude-page.html" },
+            { name: "Subway", description: "Fresh sandwiches", rating: 4.3, reviews: 80, image: "subway.jpeg", link: "subway-page.html" }
+        ];
+    
+        const reviews = [
+            { title: "Great Chicken!", body: "Loved the Korean fried chicken at 24 Chicken.", establishment: "24 Chicken", profile: "John Doe" },
+            { title: "Best Bacsilog", body: "Ate Rica's Bacsilog is my favorite comfort food.", establishment: "Ate Rica's Bacsilog", profile: "Jane Smith" },
+            { title: "Mongolian BBQ Heaven", body: "Mongolian Master serves amazing barbecue.", establishment: "Mongolian Master", profile: "Alex Johnson" },
+            { title: "Cozy and Comfortable", body: "Prelude Cafe is a great place to relax.", establishment: "Prelude Cafe", profile: "Emily Davis" },
+            { title: "Fresh and Delicious", body: "Subway's sandwiches are always fresh.", establishment: "Subway", profile: "Michael Brown" }
+        ];
+    
+        // Script to extract search query from URL and display results
         window.onload = function() {
             const urlParams = new URLSearchParams(window.location.search);
-            const query = urlParams.get('query');
+            const query = urlParams.get('query').toLowerCase();
             document.getElementById('search-query').innerText = query;
+    
+            const establishmentResultsContainer = document.querySelector('#establishment-results .grid');
+            const reviewResultsContainer = document.querySelector('#review-results .grid');
+            establishmentResultsContainer.innerHTML = '';
+            reviewResultsContainer.innerHTML = '';
+    
+            const ratingFilter = document.getElementById('rating-filter');
+            ratingFilter.addEventListener('change', () => filterResults(query));
+    
+            filterResults(query);
         }
-    </script>
+    
+        function filterResults(query) {
+            const ratingFilterValue = parseFloat(document.getElementById('rating-filter').value) || 0;
+    
+            const filteredEstablishments = establishments.filter(establishment => {
+                return (establishment.name.toLowerCase().includes(query) || establishment.description.toLowerCase().includes(query)) && establishment.rating >= ratingFilterValue;
+            });
+    
+            const filteredReviews = reviews.filter(review => {
+                return (review.title.toLowerCase().includes(query) || review.body.toLowerCase().includes(query));
+            });
+    
+            const establishmentResultsContainer = document.querySelector('#establishment-results .grid');
+            const reviewResultsContainer = document.querySelector('#review-results .grid');
+    
+            establishmentResultsContainer.innerHTML = '';
+            reviewResultsContainer.innerHTML = '';
+    
+            filteredEstablishments.forEach(establishment => {
+                const establishmentCard = document.createElement('div');
+                establishmentCard.className = 'bg-white rounded-lg shadow-lg p-6 mb-4';
+                establishmentCard.innerHTML = `
+                    <a href="${establishment.link}">
+                        <h1 class="text-2xl font-semibold mb-2">${establishment.name}</h1>
+                    </a>
+                    <div class="flex items-center mb-2">
+                        <span class="text-yellow-500">&#9733;</span>
+                        <span class="text-yellow-500">&#9733;</span>
+                        <span class="text-yellow-500">&#9733;</span>
+                        <span class="text-yellow-500">&#9733;</span>
+                        <span class="text-gray-400">&#9733;</span>
+                    </div>
+                    <p class="text-gray-700">${establishment.description}</p>
+                    <p class="text-gray-600 text-sm mt-2 mb-5">Rating: ${establishment.rating} (${establishment.reviews} reviews)</p>
+                `;
+                establishmentResultsContainer.appendChild(establishmentCard);
+            });
+    
+            filteredReviews.forEach(review => {
+                const reviewCard = document.createElement('div');
+                reviewCard.className = 'bg-white rounded-lg shadow-lg p-6 mb-4';
+                reviewCard.innerHTML = `
+                    <h1 class="text-2xl font-semibold mb-2">${review.establishment}</h1>
+                    <h3 class="text-base font-semibold mb-2">${review.title}</h3>
+                    <div class="flex items-center mb-2">
+                        <span class="text-yellow-500">&#9733;</span>
+                        <span class="text-yellow-500">&#9733;</span>
+                        <span class="text-yellow-500">&#9733;</span>
+                        <span class="text-yellow-500">&#9733;</span>
+                        <span class="text-gray-400">&#9733;</span>
+                    </div>
+                    <p class="text-gray-700">${review.body}</p>
+                    <p class="text-gray-600 text-sm mt-2 mb-5">Profile: ${review.profile}</p>
+                `;
+                reviewResultsContainer.appendChild(reviewCard);
+            });
+        }
+    </script>               
 </body>
 </html>
