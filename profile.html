@@ -1,102 +1,144 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <!-- Head Section -->
-    <head>        
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
-    </head>
-    <!-- Body Section -->
-    <body class="font-sans bg-gray-100">
-        <!-- Header Section -->
-        <header class="w-full bg-green-800 h-20 flex items-center justify-between px-5 text-white relative z-10">
-            <div class="flex items-center">
-                    <!-- Sidebar Toggle Button -->
-                    <div class="w-7 h-6 bg-no-repeat bg-center cursor-pointer" onclick="toggleSidebar()" style="background-image: url(nav-icon.png);"></div>
-                    <!-- Logo -->
-                    <a href="index.html">
-                        <img class="w-64 h-auto ml-5" alt="Tafteria Logo" src="tafteria-logo.png">
-                    </a>
-            </div>
-            <!-- Search Bar-->
-            <div class="flex-grow max-w-md mx-5">
-                <input type="text" class="w-full h-10 rounded-lg border border-gray-300 px-4 text-black" placeholder="Search establishments...">
-            </div>
-            <!-- Register and Login Buttons -->
-            <div class="flex items-center">
-                <a class="bg-yellow-500 w-32 h-10 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors mx-2" href="register.html">Register</a>
-                <a class="bg-yellow-500 w-32 h-10 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors mx-2" href="login.html">Login</a>
-                <a class="bg-red-500 w-32 h-10 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-red-500 transition-colors mx-2" href="login.html">Logout</a>
-            </div>
-            <img src="profile-pic.png" class="w-12">                
-        </header>
-        <!-- Sidebar Navigation -->
-        <nav id="sidebar" class="h-full fixed top-0 left-0 bg-green-900 w-0 overflow-x-hidden transition-width duration-500 pt-16 z-20">
-            <!-- Close Button -->
-            <a href="javascript:void(0)" class="absolute top-0 right-10 text-white text-3xl hover:text-yellow-500" onclick="toggleSidebar()">&times;</a>
-            <!-- Navigation Links -->
-            <a href="index.html" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Home</a>
-            <a href="profile.html" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Profile</a>
-            <a href="establishments.html" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Establishments</a>
-            <a href="#" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Reviews</a>
-        </nav>
-        <!-- Main Section -->
-    <div id="main" class="flex items-center justify-center h-screen bg-cover bg-center" style="background-image: url(agno1.jpg);">
-        <div class="w-full h-full flex flex-col items-center justify-center bg-black bg-opacity-50 text-center text-white p-10">
-            <div class="w-11/12 relative h-auto overflow-hidden text-gray-800 bg-white rounded-tr-2xl">
-                <!-- Main Title -->
-            <h1 class="text-5xl md:text-5xl font-bold mb-10 text-center">
-                Profile
-                
-            </h1>
-                
-            <!-- Main Subtitle -->
-            <p class="text-2xl md:text-4xl font-light m-auto w-9/12 text-center">Juan Alejandro Mar</p>
-                <img src="profile-pic.png" class="h-40 ml-5 mt-5 mb-5">
-                <div class="flex">
-                    <div class="in-1">
-                        <b class="discover-the-best"></b>
-                        
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>User Profile | Tafteria</title>
+</head>
+<body class="bg-gray-100 leading-normal tracking-normal">
+    <!-- Header Section-->
+    <header class="w-full bg-green-800 h-20 flex items-center justify-between px-5 text-white relative z-10">
+        <div class="flex items-center">
+            <!-- Sidebar Toggle Button -->
+            <div class="w-7 h-6 bg-no-repeat bg-center cursor-pointer" onclick="toggleSidebar()" style="background-image: url(nav-icon.png);"></div>
+            <!-- Logo -->
+            <a href="index.html">
+                <img class="w-64 h-auto ml-5" alt="Tafteria Logo" src="tafteria-logo.png">
+            </a>
+        </div>
+        <!-- Search Bar -->
+        <div class="flex-grow max-w-md mx-5">
+            <form action="search.html" method="GET" class="flex">
+                <input type="text" name="query" class="w-full h-10 rounded-l-lg border border-gray-300 px-4 text-black" placeholder="Search establishments or reviews...">
+                <button type="submit" class="h-10 px-4 rounded-r-lg bg-yellow-500 text-white hover:bg-yellow-400 transition-colors">Search</button>
+            </form>
+        </div>
+        <!-- Logout Button -->
+        <div class="flex items-center">
+            <a class="bg-red-500 w-32 h-9 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-red-500 transition-colors mx-2" href="login.html">Logout</a>
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar" class="h-full fixed top-0 left-0 bg-green-900 w-0 overflow-x-hidden transition-width duration-500 pt-16 z-20">
+        <!-- Close Button -->
+        <a href="javascript:void(0)" class="absolute top-0 right-10 text-white text-3xl hover:text-yellow-500" onclick="toggleSidebar()">&times;</a>
+        <!-- Navigation Links -->
+        <a href="index.html" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Home</a>
+        <a href="profile.html" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Profile</a>
+        <a href="establishments.html" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Establishments</a>
+        <a href="reviews.html" class="block py-3 px-6 text-white text-xl hover:text-yellow-500">Reviews</a>
+    </nav>
+    
+    <!-- Main Content -->
+    <div id="main" class="flex flex-col items-center justify-center min-h-screen bg-gray-100 bg-cover bg-center" style="background-image: url(agno1.jpg);">
+        <div class="w-full h-screen flex flex-col items-center justify-center bg-black bg-opacity-50 text-black p-10">
+            <div class="bg-white shadow-md rounded-lg p-6 w-full max-w-4xl overflow-y-scroll">
+                <h1 class="text-2xl font-bold mb-4">User Profile</h1>
+                <div class="flex items-center mb-6">
+                    <img src="yuta-profile.png" alt="User Profile Picture" class="rounded-full w-32 h-32 object-cover mr-4">
+                    <div>
+                        <h2 class="text-xl font-semibold">Yuta Okkotsu</h2>
+                        <p class="text-gray-600">rika@gmail.com</p>
+                        <p class="text-gray-600">Joined on March 27, 2019</p>
                     </div>
-                    <div class="in-2">
-                        <b class="name"></b>
-                        <p></p>
-                    </div>                    
                 </div>
-                
-                
-                <div class="flex-row mb-3 ml-24">
-                    <a class="bg-green-800 w-32 h-10 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors mx-2" href="#">
-                        <p class="explore-establishments">Explore Establishments</p>
-                    </a>
-                    <br>
-                    <a class="bg-yellow-500 w-32 h-10 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors mx-2" href="#">
-                        <p class="write-review">Write a Review</p>
-                    </a>
+                <h2 class="text-xl font-semibold mb-4">Review History</h2>
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-4">
+                    <h1 class="text-2xl font-semibold mb-2">24 Chicken</h1>
+                    <h3 class="text-base font-semibold mb-2">Great Place to Eat!</h3>
+                    <div class="flex items-center mb-2">
+                        <span class="text-yellow-500"><i class="fa fa-star"></i></span>
+                        <span class="text-yellow-500"><i class="fa fa-star"></i></span>
+                        <span class="text-yellow-500"><i class="fa fa-star"></i></span>
+                        <span class="text-yellow-500"><i class="fa fa-star"></i></span>
+                        <span class="text-gray-400"><i class="fa fa-star"></i></span>
+                    </div>
+                    <p class="text-gray-700">This place has amazing food and great service. Highly recommend!</p>
+                    <p class="text-gray-600 text-sm mt-2">Reviewed on March 15, 2023</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-4">
+                    <h1 class="text-2xl font-semibold mb-2">Mongolian Master</h1>
+                    <h3 class="text-base font-semibold mb-2">Decent Experience</h3>
+                    <div class="flex items-center mb-2">
+                        <span class="text-yellow-500"><i class="fa fa-star"></i></span>
+                        <span class="text-yellow-500"><i class="fa fa-star"></i></span>
+                        <span class="text-yellow-500"><i class="fa fa-star"></i></span>
+                        <span class="text-gray-400"><i class="fa fa-star"></i></span>
+                        <span class="text-gray-400"><i class="fa fa-star"></i></span>
+                    </div>
+                    <p class="text-gray-700">The food was good, but the service could be better.</p>
+                    <p class="text-gray-600 text-sm mt-2">Reviewed on February 10, 2023</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-4">
+                    <h1 class="text-2xl font-semibold mb-2">Ate Rica's Bacsilog</h1>
+                    <h3 class="text-base font-semibold mb-2">Good for my Cursed Technique!</h3>
+                    <div class="flex items-center mb-2">
+                        <span class="text-yellow-500"><i class="fa fa-star"></i></span>
+                        <span class="text-yellow-500"><i class="fa fa-star"></i></span>
+                        <span class="text-yellow-500"><i class="fa fa-star"></i></span>
+                        <span class="text-yellow-500"><i class="fa fa-star"></i></span>
+                        <span class="text-yellow-500"><i class="fa fa-star"></i></span>
+                    </div>
+                    <p class="text-gray-700">The food was good, Rika liked it!</p>
+                    <p class="text-gray-600 text-sm mt-2">Reviewed on May 8, 2022</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-4">
+                    <h1 class="text-2xl font-semibold mb-2">Prelude Cafe</h1>
+                    <h3 class="text-base font-semibold mb-2">Gojo-Sensei would love it!</h3>
+                    <div class="flex items-center mb-2">
+                        <span class="text-yellow-500"><i class="fa fa-star"></i></span>
+                        <span class="text-yellow-500"><i class="fa fa-star"></i></span>
+                        <span class="text-yellow-500"><i class="fa fa-star"></i></span>
+                        <span class="text-gray-400"><i class="fa fa-star"></i></span>
+                        <span class="text-gray-400"><i class="fa fa-star"></i></span>
+                    </div>
+                    <p class="text-gray-700">Gojo-sensei loves desserts, so he would love this place!</p>
+                    <p class="text-gray-600 text-sm mt-2">Reviewed on May 1, 2022</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-4">
+                    <h1 class="text-2xl font-semibold mb-2">Subway</h1>
+                    <h3 class="text-base font-semibold mb-2">Meh</h3>
+                    <div class="flex items-center mb-2">
+                        <span class="text-yellow-500"><i class="fa fa-star"></i></span>
+                        <span class="text-yellow-500"><i class="fa fa-star"></i></span>
+                        <span class="text-yellow-500"><i class="fa fa-star"></i></span>
+                        <span class="text-gray-400"><i class="fa fa-star"></i></span>
+                        <span class="text-gray-400"><i class="fa fa-star"></i></span>
+                    </div>
+                    <p class="text-gray-700">It was fine, I guess..</p>
+                    <p class="text-gray-600 text-sm mt-2">Reviewed on March 16, 2022</p>
                 </div>
             </div>
         </div>
-            
     </div>
-        <!-- Footer Section -->
-        <footer class="w-full h-20 bg-green-800 text-white py-5 flex justify-between items-center px-5">
-            <div>© Tafteria 2024 (CCAPDEV Group 14)</div>
-            <a class="bg-yellow-500 w-32 h-10 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors" href="#">To the top</a>
-        </footer>
+    <!-- Footer Section -->
+    <footer class="w-full h-20 bg-green-800 text-white py-5 flex justify-between items-center px-5">
+        <div>© Tafteria 2024 (CCAPDEV Group 14)</div>
+        <a class="bg-yellow-500 w-32 h-9 flex items-center justify-center rounded-lg font-bold text-white hover:bg-white hover:text-yellow-500 transition-colors" href="#">To the top</a>
+    </footer>
     
-        <!-- Sidebar Toggle -->
-        <script>
-            function toggleSidebar() {
-                var sidebar = document.getElementById("sidebar");
-                if (sidebar.style.width === "0px" || sidebar.style.width === "") {
-                    sidebar.style.width = "250px";
-                } else {
-                    sidebar.style.width = "0";
-                }
+    <!-- Sidebar Toggle Script -->
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            if (sidebar.style.width === "0px" || sidebar.style.width === "") {
+                sidebar.style.width = "250px";
+            } else {
+                sidebar.style.width = "0";
             }
-        </script>
-
-    </body>
+        }
+    </script>
+</body>
 </html>
